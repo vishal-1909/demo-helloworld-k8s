@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: vishal4590/demo-helloworld:1.0
+          image: vishal4590/demo-helloworld:2.0
           ports:
             - containerPort: 3000
           imagePullPolicy: Always
