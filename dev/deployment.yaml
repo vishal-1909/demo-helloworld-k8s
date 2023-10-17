@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-helloworld
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-helloworld
+  template:
+    metadata:
+      labels:
+        app: demo-helloworld
+    spec:
+      containers:
+        - name: app
+          image: vishal4590/demo-helloworld:1.0
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: Always
