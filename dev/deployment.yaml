@@ -15,6 +15,13 @@ spec:
       containers:
         - name: app
           image: vishal4590/demo-helloworld:2.0
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: "1"
+            requests:
+              memory: 256Mi
+              cpu: "0.5"
           ports:
             - containerPort: 3000
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
